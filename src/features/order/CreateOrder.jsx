@@ -10,30 +10,6 @@ const isValidPhone = (str) =>
     str,
   );
 
-const fakeCart = [
-  {
-    pizzaId: 12,
-    name: "Mediterranean",
-    quantity: 2,
-    unitPrice: 16,
-    totalPrice: 32,
-  },
-  {
-    pizzaId: 6,
-    name: "Vegetale",
-    quantity: 1,
-    unitPrice: 13,
-    totalPrice: 13,
-  },
-  {
-    pizzaId: 11,
-    name: "Spinach and Mushroom",
-    quantity: 1,
-    unitPrice: 15,
-    totalPrice: 15,
-  },
-];
-
 export async function action({ request }) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
@@ -68,7 +44,7 @@ function CreateOrder() {
   const isSubmitting = navigation.state === "submitting";
   // const [withPriority, setWithPriority] = useState(false);
 
-  const { username } = useSelector((state) => state.user);
+  const { username } = useSelector  ((state) => state.user);
 
   const formErrors = useActionData();
 
